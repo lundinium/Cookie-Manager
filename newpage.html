@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="newpage.js"></script>
+    <!-- This page uses the pure stylesheet, for license view css files -->
+    <link rel="stylesheet" type="text/css" href="css/tables.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/buttons.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/forms.css"></link>
+    <style>
+        /* always show scrollbar for usability */
+        html {
+            overflow-y: scroll;
+        }
+        table {
+            table-layout: fixed;
+            width: 100%;
+        }
+        /* top align content for usability and break long cookie values*/
+        td {
+            word-wrap: break-word;
+            vertical-align: top;
+        }
+        /* italic placeholders in input fields */
+        ::-webkit-input-placeholder {
+            font-style: italic;
+        }
+        :-moz-placeholder {
+            font-style: italic;
+        }
+        ::-moz-placeholder {
+            font-style: italic;
+        }
+        :-ms-input-placeholder {
+            font-style: italic;
+        }
+        label {
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form class="pure-form pure-form-stacked">
+            <!-- input fields for filtering cookies -->
+            <fieldset>
+                <label for="hostFilter_input">Filter by host:</label>
+                <input id="hostFilter_input" type="text" placeholder=".example.com"></input>
+                <label for="nameFilter_input">Filter by name:</label>
+                <input id="nameFilter_input" type="text" placeholder="name"></input>
+                <label for="valueFilter_input">Filter by value:</label>
+                <input id="valueFilter_input" type="text" placeholder="value"></input>
+                <label for="filters">Filter by session/persistent:</label>
+                <div id="filters">
+                    <input type="radio" name="session" id="all" value="-1" checked>All cookies
+                    <input type="radio" name="session" id="sessiononly" value="1">Session cookies only
+                    <input type="radio" name="session" id="exponly" value="0">Persistent cookies only
+                </div>
+            </fieldset>
+        </form>
+        <!-- buttons for applying filters or refreshing table, resetting filters and then refreshing table, and for deleting all shown cookies -->
+        <div><button class="pure-button" id="apply">Apply/refresh</button>&nbsp;<button class="pure-button" id="removeallfilters">Reset filters</button>&nbsp;<button class="pure-button" id="deleteselected">Delete selected cokies</button></div><br />
+        <div id="results" style="font-size:larger; margin-left:2px">0 results:</div>
+    </div>
+    <br />
+    <!-- the table in which the cookies are listed -->
+    <table class="pure-table-striped pure-table">
+        <thead>
+            <tr>
+                <th style="width:50px">No.:</th>
+                <th style="width:150px">Host:</th>
+                <th style="width:150px">Path:</th>
+                <th style="width:150px">Name:</th>
+                <th style="width:200px">Value:</th>
+                <th style="width: 200px">Expires:</th>
+                <th style="width: 50px; text-align: center">[Delete]</th>
+            </tr>
+        </thead>
+        <!-- table body, later filled with rows via javascript -->
+        <tbody id="cookiesTable">
+        </tbody>
+    </table>
+</body>
+</html>

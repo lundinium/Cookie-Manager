@@ -1,0 +1,24 @@
+Cookie Manager Chrome Extension
+
+INSTALLATION:
+
+1. Öffnen Sie Google Chrome.
+2. Navigieren Sie über die Adresszeile zur Seite "chrome://extensions/".
+3. Aktivieren Sie den Entwicklermodus bzw. Developer mode.
+4. Klicken Sie auf "Entpackte Erweiterung laden" bzw. "Load unpacked".
+5. Wählen Sie das Verzeichnis aus, in dem sich die Datei manifest.json befindet (Verzeichnis "Cookie Manager Extension").
+
+VERWENDUNG:
+
+1. Neben der Adresszeile sollte ein neues Icon erschienen sein, das ein "C" zeigt.
+2. Ein Klick auf das Icon zeigt die Anzahl der gespeicherten Cookies an.
+3. Ein Klick auf den Button "View" im Pop-Up öffnet eine neue Seite.
+4. Auf dieser Seite sind die vorhandenen Cookies mit ihrem Inhalt und ihren wichtigsten Daten aufgelistet.
+5. Die Verwendung der Suchfunktion sollte selbsterklärend sein.
+6. Ein Klick auf das X am Ende einer Zeile löscht das zugehörige Cookie.
+7. Ein Klick auf "Delete selected Cookies" löscht nach Bestätigung alle Cookies der aktuellen Ansicht auf einmal.
+8. Sollten keine Cookies vorhanden sein, werden beim Klick auf das Icon neben der Adresszeile einige Test-Cookies geschrieben.
+
+Es werden die Pure-Stylesheets verwendet, verfügbar auf https://purecss.io/. Für die Lizenz siehe ./Cookie Manager Extension/css/LICENSE.
+Die Extension wurde getestet in Google Chrome 76 unter Windows 10.
+Im Quelltext sind Kommentare in englischer Sprache enthalten.
